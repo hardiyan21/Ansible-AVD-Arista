@@ -1,0 +1,100 @@
+ansible==2.10.0
+netaddr==0.7.19
+Jinja2==2.11.3
+requests==2.25.1
+treelib==1.5.5
+cvprac==1.0.5
+paramiko==2.7.2
+jsonschema==3.2.0
+requests==2.25.1
+PyYAML==5.4.1
+md-toc==7.1.0
+
+https://stackoverflow.com/questions/66898861/permission-issues-for-importing-functions
+
+pip3 install setuptools-rust
+sudo apt install rustc
+
+ansible all --list-hosts
+
+arista.avd.eos_designs 
+
+sudo chown username: myfolder
+sudo chmod u+w myfolder
+
+$ grep john /etc/passwd
+john:x:0:0::/home/john:/bin/sh
+
+Check python version on terminal - python --version
+Get root user privileges. On terminal type - sudo su
+Write down the root user password.
+Execute this command to switch to python 3.6. update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+Check python version - python --version
+All Done!
+
+daemon TerminAttr
+   exec /usr/bin/TerminAttr -ingestgrpcurl=192.168.26.126:9910 -cvcompression=gzip -ingestauth=key,arista -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -ingestvrf=default -taillogs
+   no shutdown
+
+You may need to delete old fingerprint in this file: C:\Users\xxx.ssh\known_host
+
+and old IP in the file: C:\Users\xxx.ssh\config
+
+Then try to add host again.
+
+git init
+git add <folder1> <folder2> <etc.>
+git commit -m "Your message about the commit"
+git remote add origin https://github.com/yourUsername/yourRepository.git
+git push -u origin master
+git push origin master
+
+how to push new git repo
+--------------------------
+
+ 2025  git init
+ 2028  git add day4-100days-of-code/
+ 2029  git commit -m "rock paper scissor game"
+ 2030  git remote rm origin
+ 2033  git remote add origin https://github.com/hardiyan21/100days-of-code.git
+ 2034  git push origin master
+ 2035  git push -u origin master
+
+# Configure Python virtual environment
+$ virtualenv -p $(which python) .venv
+$ source .venv/bin/activate
+
+# Install Python requirements
+$ pip install -r requirements.txt
+
+# Install arista collections
+$ ansible-galaxy collection install arista.avd
+$ ansible-galaxy collection install arista.cvp
+
+# Install batfish role from galaxy
+$ ansible-galaxy install batfish.base
+
+# Start batfish server
+$ docker run --name batfish -v batfish-data:/data \
+  -p 8888:8888 -p 9997:9997 -p 9996:9996 batfish/allinone
+
+# Edit Inventory file
+$ vim inventory.yml
+
+# Edit fabric variables
+# Change values to point to your own information
+$ vim group_vars/DC1_FABRIC.yml
+
+# Run ansible playbooks
+$ cd ansible/avd-evpn-l3ls-1/
+$ ansible-playbook dc-fabric-config.yml --tags "build"
+
+Enable IP routing for the VRF:
+
+ip routing vrf Management
+
+Also remove this:
+
+ntp source Management1
+
+The "ntp server vrf Management 10.10.10.10 iburst" is all you'll need.

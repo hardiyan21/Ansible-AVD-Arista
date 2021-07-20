@@ -1,0 +1,48 @@
+---
+- name: Configure ZTP/DHCP service on CloudVision
+  hosts: cv_ztp
+  gather_facts: true
+  collections:
+    - arista.cvp
+  vars:
+    ztp:
+      default:
+        registration: 'http://192.168.26.126/ztp/bootstrap'
+        gateway: 192.168.26.1
+        nameservers:
+          - '192.168.26.1'
+      general:
+        subnets:
+          - network: 192.168.26.0
+            netmask: 255.255.255.0
+            gateway: 192.168.26.1
+            nameservers:
+              - '192.168.26.1'
+            start: 192.168.26.200
+            end: 192.168.26.250
+            lease_time: 300
+      clients:
+      # AVD/CVP Integration
+        - name: HK-SPINE1
+          mac: '0c:fc:24:93:94:00'
+          ip4: 192.168.26.131
+        - name: HK-SPINE2
+          mac: '0c:fc:24:4d:8b:00'
+          ip4: 192.168.26.132
+        - name: HK-LEAF1A
+          mac: '0c:fc:24:5f:0e:00'
+          ip4: 192.168.26.133
+        - name: HK-LEAF1B
+          mac: '0c:fc:24:71:1b:00'
+          ip4: 192.168.26.134
+        - name: HK-LEAF2A
+          mac: '0c:fc:24:ca:59:00'
+          ip4: 192.168.26.135
+        - name: HK-LEAF2B
+          mac: '0c:fc:24:31:94:00'
+          ip4: 192.168.26.136
+
+  tasks:
+  - name: 'Execute DHCP configuration role'
+    import_role:
+      name: arista.cvp.dhcp_configuration

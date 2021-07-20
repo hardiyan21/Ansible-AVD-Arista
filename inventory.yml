@@ -1,0 +1,51 @@
+---
+all:
+  children:
+    CVP:
+      hosts:
+        cv_ztp:
+          ansible_host: 192.168.26.126
+          ansible_user: root
+          ansible_password: D4t4c0mm
+        cv_server:
+    # HK_Fabric - EVPN Fabric running in home lab
+    HK_LAB:
+      children:
+        HK_FABRIC:
+          children:
+            HK_SPINES:
+              hosts:
+                HK-SPINE1:
+                  ansible_host: 192.168.26.131
+                HK-SPINE2:
+                  ansible_host: 192.168.26.132
+            HK_LEAFS:
+              children:
+                HK_LEAF1:
+                  hosts:
+                    HK-LEAF1A:
+                      ansible_host: 192.168.26.133
+                    HK-LEAF1B:
+                      ansible_host: 192.168.26.134
+                HK_LEAF2:
+                  hosts:
+                    HK-LEAF2A:
+                      ansible_host: 192.168.26.135
+                    HK-LEAF2B:
+                      ansible_host: 192.168.26.136
+          vars:
+            ansible_connection: httpapi
+            ansible_network_os: eos
+            ansible_user: admin
+            # should use vault for passwords
+            ansible_ssh_pass: admin
+            ansible_become: true
+            ansible_become_method: enable
+            ansible_httpapi_use_ssl: true
+            ansible_httpapi_validate_certs: false
+        HK_TENANTS_NETWORKS:
+          children:
+            HK_LEAFS:
+        HK_SERVERS:
+          children:
+            HK_LEAFS:

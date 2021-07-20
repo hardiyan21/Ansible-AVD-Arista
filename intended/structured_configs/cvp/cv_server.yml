@@ -1,0 +1,49 @@
+---
+CVP_DEVICES:
+  HK-LEAF1A:
+    name: HK-LEAF1A
+    parentContainerName: HK_LEAF1
+    configlets:
+      - HK-AVD_HK-LEAF1A
+    imageBundle: []
+  HK-LEAF1B:
+    name: HK-LEAF1B
+    parentContainerName: HK_LEAF1
+    configlets:
+      - HK-AVD_HK-LEAF1B
+    imageBundle: []
+  HK-LEAF2A:
+    name: HK-LEAF2A
+    parentContainerName: HK_LEAF2
+    configlets:
+      - HK-AVD_HK-LEAF2A
+    imageBundle: []
+  HK-LEAF2B:
+    name: HK-LEAF2B
+    parentContainerName: HK_LEAF2
+    configlets:
+      - HK-AVD_HK-LEAF2B
+    imageBundle: []
+  HK-SPINE1:
+    name: HK-SPINE1
+    parentContainerName: HK_SPINES
+    configlets:
+      - HK-AVD_HK-SPINE1
+    imageBundle: []
+  HK-SPINE2:
+    name: HK-SPINE2
+    parentContainerName: HK_SPINES
+    configlets:
+      - HK-AVD_HK-SPINE2
+    imageBundle: []
+CVP_CONTAINERS:
+  HK_FABRIC:
+    parent_container: Tenant
+  HK_LEAF1:
+    parent_container: HK_LEAFS
+  HK_LEAF2:
+    parent_container: HK_LEAFS
+  HK_LEAFS:
+    parent_container: HK_FABRIC
+  HK_SPINES:
+    parent_container: HK_FABRIC

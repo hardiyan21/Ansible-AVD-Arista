@@ -1,0 +1,793 @@
+duts:
+  HK-LEAF1A:
+    "show version":
+      architecture: i686
+      bootupTimestamp: 1626620565.0
+      configMacAddress: 00:00:00:00:00:00
+      hardwareRevision: ''
+      hwMacAddress: 00:00:00:00:00:00
+      internalBuildId: 42596720-8616-494e-8e7f-2e6fc1c92b2e
+      internalVersion: 4.25.4M-22402993.4254M
+      isIntlVersion: false
+      memFree: 1050260
+      memTotal: 2006880
+      mfgName: ''
+      modelName: vEOS
+      serialNumber: ''
+      systemMacAddress: 0c:fc:24:9e:9c:f9
+      uptime: 1401.19
+      version: 4.25.4M
+    "show ip bgp summary":
+      vrfs:
+        default:
+          asn: '65101'
+          peers:
+            10.255.251.1:
+              asn: '65101'
+              description: HK-LEAF1B
+              inMsgQueue: 0
+              msgReceived: 32
+              msgSent: 34
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 7
+              prefixReceived: 7
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.0:
+              asn: '65001'
+              description: HK-SPINE1_Ethernet1
+              inMsgQueue: 0
+              msgReceived: 33
+              msgSent: 34
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 4
+              prefixReceived: 4
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.2:
+              asn: '65001'
+              description: HK-SPINE2_Ethernet1
+              inMsgQueue: 0
+              msgReceived: 34
+              msgSent: 32
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 4
+              prefixReceived: 4
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+          routerId: 192.168.255.3
+          vrf: default
+    "show bgp evpn summary":
+      vrfs:
+        default:
+          asn: '65101'
+          peers:
+            192.168.255.1:
+              asn: '65001'
+              description: HK-SPINE1
+              inMsgQueue: 0
+              msgReceived: 77
+              msgSent: 71
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 68
+              prefixReceived: 68
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            192.168.255.2:
+              asn: '65001'
+              description: HK-SPINE2
+              inMsgQueue: 0
+              msgReceived: 76
+              msgSent: 59
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 34
+              prefixReceived: 34
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+          routerId: 192.168.255.3
+          vrf: default
+    "show lldp neighbors":
+      lldpNeighbors:
+      - neighborDevice: HK-SPINE1
+        neighborPort: Ethernet1
+        port: Ethernet1
+        ttl: 120
+      - neighborDevice: HK-SPINE2
+        neighborPort: Ethernet1
+        port: Ethernet2
+        ttl: 120
+      - neighborDevice: HK-LEAF1B
+        neighborPort: Ethernet3
+        port: Ethernet3
+        ttl: 120
+      - neighborDevice: HK-LEAF1B
+        neighborPort: Ethernet4
+        port: Ethernet4
+        ttl: 120
+      tablesAgeOuts: 5
+      tablesDeletes: 8
+      tablesDrops: 0
+      tablesInserts: 12
+      tablesLastChangeTime: 1626621727.3460562
+  HK-LEAF1B:
+    "show version":
+      architecture: i686
+      bootupTimestamp: 1626620564.0
+      configMacAddress: 00:00:00:00:00:00
+      hardwareRevision: ''
+      hwMacAddress: 00:00:00:00:00:00
+      internalBuildId: 42596720-8616-494e-8e7f-2e6fc1c92b2e
+      internalVersion: 4.25.4M-22402993.4254M
+      isIntlVersion: false
+      memFree: 1050200
+      memTotal: 2006880
+      mfgName: ''
+      modelName: vEOS
+      serialNumber: ''
+      systemMacAddress: 0c:fc:24:d6:67:bd
+      uptime: 1401.2
+      version: 4.25.4M
+    "show ip bgp summary":
+      vrfs:
+        default:
+          asn: '65101'
+          peers:
+            10.255.251.0:
+              asn: '65101'
+              description: HK-LEAF1A
+              inMsgQueue: 0
+              msgReceived: 34
+              msgSent: 32
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 7
+              prefixReceived: 7
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.4:
+              asn: '65001'
+              description: HK-SPINE1_Ethernet2
+              inMsgQueue: 0
+              msgReceived: 32
+              msgSent: 35
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 4
+              prefixReceived: 4
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.6:
+              asn: '65001'
+              description: HK-SPINE2_Ethernet2
+              inMsgQueue: 0
+              msgReceived: 33
+              msgSent: 34
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 4
+              prefixReceived: 4
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+          routerId: 192.168.255.4
+          vrf: default
+    "show bgp evpn summary":
+      vrfs:
+        default:
+          asn: '65101'
+          peers:
+            192.168.255.1:
+              asn: '65001'
+              description: HK-SPINE1
+              inMsgQueue: 0
+              msgReceived: 77
+              msgSent: 72
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 68
+              prefixReceived: 68
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            192.168.255.2:
+              asn: '65001'
+              description: HK-SPINE2
+              inMsgQueue: 0
+              msgReceived: 77
+              msgSent: 57
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 34
+              prefixReceived: 34
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+          routerId: 192.168.255.4
+          vrf: default
+    "show lldp neighbors":
+      lldpNeighbors:
+      - neighborDevice: HK-SPINE1
+        neighborPort: Ethernet2
+        port: Ethernet1
+        ttl: 120
+      - neighborDevice: HK-SPINE2
+        neighborPort: Ethernet2
+        port: Ethernet2
+        ttl: 120
+      - neighborDevice: HK-LEAF1A
+        neighborPort: Ethernet3
+        port: Ethernet3
+        ttl: 120
+      - neighborDevice: HK-LEAF1A
+        neighborPort: Ethernet4
+        port: Ethernet4
+        ttl: 120
+      tablesAgeOuts: 5
+      tablesDeletes: 5
+      tablesDrops: 0
+      tablesInserts: 9
+      tablesLastChangeTime: 1626621726.375456
+  HK-LEAF2A:
+    "show version":
+      architecture: i686
+      bootupTimestamp: 1626620560.0
+      configMacAddress: 00:00:00:00:00:00
+      hardwareRevision: ''
+      hwMacAddress: 00:00:00:00:00:00
+      internalBuildId: 42596720-8616-494e-8e7f-2e6fc1c92b2e
+      internalVersion: 4.25.4M-22402993.4254M
+      isIntlVersion: false
+      memFree: 1019160
+      memTotal: 2006880
+      mfgName: ''
+      modelName: vEOS
+      serialNumber: ''
+      systemMacAddress: 0c:fc:24:58:00:7f
+      uptime: 1404.95
+      version: 4.25.4M
+    "show ip bgp summary":
+      vrfs:
+        default:
+          asn: '65102'
+          peers:
+            10.255.251.5:
+              asn: '65102'
+              description: HK-LEAF2B
+              inMsgQueue: 0
+              msgReceived: 32
+              msgSent: 33
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 7
+              prefixReceived: 7
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.10:
+              asn: '65001'
+              description: HK-SPINE2_Ethernet3
+              inMsgQueue: 0
+              msgReceived: 32
+              msgSent: 32
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 4
+              prefixReceived: 4
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.8:
+              asn: '65001'
+              description: HK-SPINE1_Ethernet3
+              inMsgQueue: 0
+              msgReceived: 31
+              msgSent: 33
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 4
+              prefixReceived: 4
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+          routerId: 192.168.255.5
+          vrf: default
+    "show bgp evpn summary":
+      vrfs:
+        default:
+          asn: '65102'
+          peers:
+            192.168.255.1:
+              asn: '65001'
+              description: HK-SPINE1
+              inMsgQueue: 0
+              msgReceived: 56
+              msgSent: 54
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 20
+              prefixReceived: 20
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            192.168.255.2:
+              asn: '65001'
+              description: HK-SPINE2
+              inMsgQueue: 0
+              msgReceived: 55
+              msgSent: 53
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 20
+              prefixReceived: 20
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+          routerId: 192.168.255.5
+          vrf: default
+    "show lldp neighbors":
+      lldpNeighbors:
+      - neighborDevice: HK-SPINE1
+        neighborPort: Ethernet3
+        port: Ethernet1
+        ttl: 120
+      - neighborDevice: HK-SPINE2
+        neighborPort: Ethernet3
+        port: Ethernet2
+        ttl: 120
+      - neighborDevice: HK-LEAF2B
+        neighborPort: Ethernet3
+        port: Ethernet3
+        ttl: 120
+      - neighborDevice: HK-LEAF2B
+        neighborPort: Ethernet4
+        port: Ethernet4
+        ttl: 120
+      tablesAgeOuts: 5
+      tablesDeletes: 5
+      tablesDrops: 0
+      tablesInserts: 9
+      tablesLastChangeTime: 1626621726.35227
+  HK-LEAF2B:
+    "show version":
+      architecture: i686
+      bootupTimestamp: 1626620566.0
+      configMacAddress: 00:00:00:00:00:00
+      hardwareRevision: ''
+      hwMacAddress: 00:00:00:00:00:00
+      internalBuildId: 42596720-8616-494e-8e7f-2e6fc1c92b2e
+      internalVersion: 4.25.4M-22402993.4254M
+      isIntlVersion: false
+      memFree: 1020784
+      memTotal: 2006880
+      mfgName: ''
+      modelName: vEOS
+      serialNumber: ''
+      systemMacAddress: 0c:fc:24:81:9c:23
+      uptime: 1400.38
+      version: 4.25.4M
+    "show ip bgp summary":
+      vrfs:
+        default:
+          asn: '65102'
+          peers:
+            10.255.251.4:
+              asn: '65102'
+              description: HK-LEAF2A
+              inMsgQueue: 0
+              msgReceived: 33
+              msgSent: 32
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 7
+              prefixReceived: 7
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.12:
+              asn: '65001'
+              description: HK-SPINE1_Ethernet4
+              inMsgQueue: 0
+              msgReceived: 32
+              msgSent: 30
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 4
+              prefixReceived: 4
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.14:
+              asn: '65001'
+              description: HK-SPINE2_Ethernet4
+              inMsgQueue: 0
+              msgReceived: 30
+              msgSent: 32
+              outMsgQueue: 57
+              peerState: Established
+              prefixAccepted: 4
+              prefixReceived: 4
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+          routerId: 192.168.255.6
+          vrf: default
+    "show bgp evpn summary":
+      vrfs:
+        default:
+          asn: '65102'
+          peers:
+            192.168.255.1:
+              asn: '65001'
+              description: HK-SPINE1
+              inMsgQueue: 0
+              msgReceived: 56
+              msgSent: 59
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 20
+              prefixReceived: 20
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            192.168.255.2:
+              asn: '65001'
+              description: HK-SPINE2
+              inMsgQueue: 0
+              msgReceived: 52
+              msgSent: 52
+              outMsgQueue: 0
+              peerState: Connect
+              prefixAccepted: 0
+              prefixReceived: 0
+              underMaintenance: false
+              upDownTime: 1626621824.0
+              version: 4
+          routerId: 192.168.255.6
+          vrf: default
+    "show lldp neighbors":
+      lldpNeighbors:
+      - neighborDevice: HK-SPINE1
+        neighborPort: Ethernet4
+        port: Ethernet1
+        ttl: 120
+      - neighborDevice: HK-LEAF2A
+        neighborPort: Ethernet3
+        port: Ethernet3
+        ttl: 120
+      - neighborDevice: HK-LEAF2A
+        neighborPort: Ethernet4
+        port: Ethernet4
+        ttl: 120
+      tablesAgeOuts: 6
+      tablesDeletes: 6
+      tablesDrops: 0
+      tablesInserts: 9
+      tablesLastChangeTime: 1626621936.8744118
+  HK-SPINE1:
+    "show version":
+      architecture: i686
+      bootupTimestamp: 1626620561.0
+      configMacAddress: 00:00:00:00:00:00
+      hardwareRevision: ''
+      hwMacAddress: 00:00:00:00:00:00
+      internalBuildId: 42596720-8616-494e-8e7f-2e6fc1c92b2e
+      internalVersion: 4.25.4M-22402993.4254M
+      isIntlVersion: false
+      memFree: 1134204
+      memTotal: 2006880
+      mfgName: ''
+      modelName: vEOS
+      serialNumber: ''
+      systemMacAddress: 0c:fc:24:fd:5f:be
+      uptime: 1400.84
+      version: 4.25.4M
+    "show ip bgp summary":
+      vrfs:
+        default:
+          asn: '65001'
+          peers:
+            172.31.255.1:
+              asn: '65101'
+              description: HK-LEAF1A_Ethernet1
+              inMsgQueue: 0
+              msgReceived: 34
+              msgSent: 33
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 3
+              prefixReceived: 3
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.13:
+              asn: '65102'
+              description: HK-LEAF2B_Ethernet1
+              inMsgQueue: 0
+              msgReceived: 30
+              msgSent: 32
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 3
+              prefixReceived: 3
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.5:
+              asn: '65101'
+              description: HK-LEAF1B_Ethernet1
+              inMsgQueue: 0
+              msgReceived: 35
+              msgSent: 32
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 3
+              prefixReceived: 3
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.9:
+              asn: '65102'
+              description: HK-LEAF2A_Ethernet1
+              inMsgQueue: 0
+              msgReceived: 33
+              msgSent: 31
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 3
+              prefixReceived: 3
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+          routerId: 192.168.255.1
+          vrf: default
+    "show bgp evpn summary":
+      vrfs:
+        default:
+          asn: '65001'
+          peers:
+            192.168.255.3:
+              asn: '65101'
+              description: HK-LEAF1A
+              inMsgQueue: 0
+              msgReceived: 70
+              msgSent: 78
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 10
+              prefixReceived: 10
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            192.168.255.4:
+              asn: '65101'
+              description: HK-LEAF1B
+              inMsgQueue: 0
+              msgReceived: 71
+              msgSent: 78
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 10
+              prefixReceived: 10
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            192.168.255.5:
+              asn: '65102'
+              description: HK-LEAF2A
+              inMsgQueue: 0
+              msgReceived: 54
+              msgSent: 56
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 34
+              prefixReceived: 34
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            192.168.255.6:
+              asn: '65102'
+              description: HK-LEAF2B
+              inMsgQueue: 0
+              msgReceived: 59
+              msgSent: 56
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 34
+              prefixReceived: 34
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+          routerId: 192.168.255.1
+          vrf: default
+    "show lldp neighbors":
+      lldpNeighbors:
+      - neighborDevice: HK-LEAF1A
+        neighborPort: Ethernet1
+        port: Ethernet1
+        ttl: 120
+      - neighborDevice: HK-LEAF1B
+        neighborPort: Ethernet1
+        port: Ethernet2
+        ttl: 120
+      - neighborDevice: HK-LEAF2A
+        neighborPort: Ethernet1
+        port: Ethernet3
+        ttl: 120
+      - neighborDevice: HK-LEAF2B
+        neighborPort: Ethernet1
+        port: Ethernet4
+        ttl: 120
+      tablesAgeOuts: 5
+      tablesDeletes: 6
+      tablesDrops: 0
+      tablesInserts: 10
+      tablesLastChangeTime: 1626621722.9996734
+  HK-SPINE2:
+    "show version":
+      architecture: i686
+      bootupTimestamp: 1626620557.0
+      configMacAddress: 00:00:00:00:00:00
+      hardwareRevision: ''
+      hwMacAddress: 00:00:00:00:00:00
+      internalBuildId: 42596720-8616-494e-8e7f-2e6fc1c92b2e
+      internalVersion: 4.25.4M-22402993.4254M
+      isIntlVersion: false
+      memFree: 1131232
+      memTotal: 2006880
+      mfgName: ''
+      modelName: vEOS
+      serialNumber: ''
+      systemMacAddress: 0c:fc:24:d6:ed:57
+      uptime: 1404.02
+      version: 4.25.4M
+    "show ip bgp summary":
+      vrfs:
+        default:
+          asn: '65001'
+          peers:
+            172.31.255.11:
+              asn: '65102'
+              description: HK-LEAF2A_Ethernet2
+              inMsgQueue: 0
+              msgReceived: 32
+              msgSent: 32
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 3
+              prefixReceived: 3
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.15:
+              asn: '65102'
+              description: HK-LEAF2B_Ethernet2
+              inMsgQueue: 0
+              msgReceived: 29
+              msgSent: 33
+              outMsgQueue: 57
+              peerState: Established
+              prefixAccepted: 3
+              prefixReceived: 3
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.3:
+              asn: '65101'
+              description: HK-LEAF1A_Ethernet2
+              inMsgQueue: 0
+              msgReceived: 32
+              msgSent: 34
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 3
+              prefixReceived: 3
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            172.31.255.7:
+              asn: '65101'
+              description: HK-LEAF1B_Ethernet2
+              inMsgQueue: 0
+              msgReceived: 34
+              msgSent: 33
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 3
+              prefixReceived: 3
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+          routerId: 192.168.255.2
+          vrf: default
+    "show bgp evpn summary":
+      vrfs:
+        default:
+          asn: '65001'
+          peers:
+            192.168.255.3:
+              asn: '65101'
+              description: HK-LEAF1A
+              inMsgQueue: 0
+              msgReceived: 59
+              msgSent: 76
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 10
+              prefixReceived: 10
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            192.168.255.4:
+              asn: '65101'
+              description: HK-LEAF1B
+              inMsgQueue: 0
+              msgReceived: 57
+              msgSent: 77
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 10
+              prefixReceived: 10
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            192.168.255.5:
+              asn: '65102'
+              description: HK-LEAF2A
+              inMsgQueue: 0
+              msgReceived: 53
+              msgSent: 55
+              outMsgQueue: 0
+              peerState: Established
+              prefixAccepted: 34
+              prefixReceived: 34
+              underMaintenance: false
+              upDownTime: 1626620672.0
+              version: 4
+            192.168.255.6:
+              asn: '65102'
+              description: HK-LEAF2B
+              inMsgQueue: 0
+              msgReceived: 51
+              msgSent: 53
+              outMsgQueue: 0
+              peerState: Connect
+              prefixAccepted: 0
+              prefixReceived: 0
+              underMaintenance: false
+              upDownTime: 1626621824.0
+              version: 4
+          routerId: 192.168.255.2
+          vrf: default
+    "show lldp neighbors":
+      lldpNeighbors:
+      - neighborDevice: HK-LEAF1A
+        neighborPort: Ethernet2
+        port: Ethernet1
+        ttl: 120
+      - neighborDevice: HK-LEAF1B
+        neighborPort: Ethernet2
+        port: Ethernet2
+        ttl: 120
+      - neighborDevice: HK-LEAF2A
+        neighborPort: Ethernet2
+        port: Ethernet3
+        ttl: 120
+      tablesAgeOuts: 6
+      tablesDeletes: 6
+      tablesDrops: 0
+      tablesInserts: 9
+      tablesLastChangeTime: 1626621934.1145468
+
+topology_csv_file: ./documentation/fabric/HK_FABRIC-topology.csv

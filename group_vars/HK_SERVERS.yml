@@ -1,0 +1,57 @@
+  
+port_profiles:
+
+  TENANT_A_B:
+    mode: trunk
+    vlans: "110-111,210-211"
+
+  TENANT_A:
+    mode: trunk
+    vlans: "110"
+
+  TENANT_B:
+    mode: trunk
+    vlans: "210-211"
+
+
+servers:
+
+  server01:
+    rack: RackB
+    adapters:
+      - server_ports: [ Eth1 ]
+        switch_ports: [ Ethernet5 ]
+        switches: [ HK-LEAF1A ]
+        profile: TENANT_A
+      - server_ports: [ Eth4, Eth5 ]
+        switch_ports: [ Ethernet7, Ethernet8 ]
+        switches: [ HK-LEAF1A, HK-LEAF1A ]
+        profile: TENANT_A
+        port_channel:
+          state: present
+          description: PortChanne1
+          mode: active
+      - server_ports: [ Eth2, Eth3 ]
+        switch_ports: [ Ethernet10, Ethernet10 ]
+        switches: [ HK-LEAF2A, HK-LEAF2B ]
+        profile: TENANT_B
+        port_channel:
+          state: present
+          description: PortChanne1
+          mode: active
+
+  server02:
+    rack: RackB
+    adapters:
+      - server_ports: [ Eth1 ]
+        switch_ports: [ Ethernet6 ]
+        switches: [ HK-LEAF1A ]
+        profile: TENANT_A
+      - server_ports: [ Eth2, Eth3 ]
+        switch_ports: [ Ethernet11, Ethernet11 ]
+        switches: [ HK-LEAF2A, HK-LEAF2B ]
+        profile: TENANT_B
+        port_channel:
+          state: present
+          description: PortChanne1
+          mode: active
